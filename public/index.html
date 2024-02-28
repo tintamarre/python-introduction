@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Initiation Python</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/cfwb.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<script src="https://cdn.tailwindcss.com"></script>
+
+		<style>
+			/* default */
+			div .slide-background-content {
+				background-image: url("https://raw.githubusercontent.com/data-cfwb/charte-graphique/main/pattern_SVG/pattern_trans.svg");
+			}
+		</style>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="bg-blue-50">
+					<h3 class="text-orange-600">Atelier</h3>
+					<h1 class="text-blue-900 bg-white border-solid border-2 border-gray-100 rounded-full">Initiation Python</h1>
+					<h2 class="text-gray-800">de l'importation à l'exploitation</h2>
+					<h3 class="text-gray-600">par Martin Erpicum</h3>
+					<p>2024-03-13</p>
+				</section>
+
+				<section class="bg-blue-50">
+					<section class="bg-blue-50">
+						<h1 class="text-blue-900 bg-white border-solid border-2 border-gray-200 rounded-full">
+							Qui suis-je ?
+						</h1>
+						<p class="text-blue-50">
+							<ul class="list-none text-3xl">
+								<li>Sociologue & data <span class="text-gray-400 italic">___</span></li>
+								<li>Créateur de <a href="https://mesydel.com">Mesylab</a> (ULiège), <a href="https://corpus.lltl.be">Corpus</a>, DataProtect, Omdat, (LegalTech Lab) ...</li>
+				
+							</ul>
+					</section>
+					<section>
+						<h1 class="text-blue-900 bg-white border-solid border-2 border-gray-200 rounded-full">
+							Bureau des données
+						</h1>
+							<ul class="list-none text-3xl bg-blue-50">
+								<li>À la FWB depuis 2022 -- (Bureau des données — DGCA — SG)</li>
+								<li>On s'occupe de <span class="text-indigo-700">data-viz-qualité-transfert-gov ...</span></li>
+								<li>Lien avec l'<strong>Etnic</strong> / <strong>BCED</strong> sur les problématiques Data</li>
+								<li>Organisateur de la <strong>communauté des intendants de données</strong></li>
+								<li>Chantier transversal: <em>données au centre</em></li>
+							</ul>
+					</section>
+					<section class="bg-blue-50">
+						<h1 class="text-blue-900 bg-white border-solid border-2 border-gray-100 rounded-full">
+							Réalisations
+						</h1>
+						<p class="text-blue-50">
+							<ul class="list-none text-3xl">
+								<li>À la FWB depuis 2022 -- (Bureau des données — DGCA — SG)</li>
+								<li>On s'occupe de <span class="text-indigo-700">data-viz-qualité-transfert-gov ...</span></li>
+								<li>Lien avec l'<strong>Etnic</strong> / <strong>BCED</strong> sur les problématiques Data</li>
+								<li>Organisateur de la <strong>communauté des intendants de données</strong></li>
+								<li>Chantier transversal: <em>données au centre</em></li>
+							</ul>
+					</section>
+				</section>
+				
+				<section class="bg-blue-50">
+					<section>
+					<h1 class="text-blue-900 bg-white border-solid border-2 border-gray-200 rounded-full">Introduction à Python</h1>
+					</section>
+					<section class="bg-blue-50">Présentation du langage Python.</section>
+					<section class="bg-blue-50">
+						<h2>Historique et popularité</h2>
+						<p class="text-gray-600 text-medium">
+							Python est un langage de programmation interprété, multi-paradigme et multi-plateformes.
+						</p>
+						<p class="text-red-500 text-medium">
+							Il favorise la programmation impérative structurée, fonctionnelle et orientée objet.
+						</p>
+					</section>
+					<section class="bg-blue-50">Installation de Python et de l'environnement de développement (IDE)</section>
+
+				</section>
+
+				<section class="bg-blue-50"><h1>Chargement de données</h1></section>
+
+				<section class="bg-blue-50">
+					<h2 class="text-blue-900 bg-white">Importer des données</h2>
+					<pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers>
+						import pandas as pd
+						df = pd.read_csv('./data.csv')
+						// df = df.read_excel('./data.xlsx')
+						// df = df.read_json('./data.json')
+						// df = df.read_csv('https://raw.githubusercontent.com/data-cfwb/initiation-python/main/data.csv', sep=';', encoding='utf-8', decimal=',')
+						df = pd.read_csv("https://www.odwb.be/api/explore/v2.1/catalog/datasets/signaletique-fase/exports/csv?lang=fr&timezone=Europe%2FBrussels&use_labels=true&delimiter=,")
+						df.head()
+					</code>
+				</pre>
+				
+				</section>
+
+				<section class="bg-blue-50">
+
+					<section class="bg-blue-50">Vertical Slide 1</section>
+					<section class="bg-blue-50">
+						<h2>Environnement de développement</h2>
+						<p>Il existe de nombreux environnements de développement pour Python. Les plus populaires sont :</p>
+						<ul>
+							<li>PyCharm</li>
+							<li>Visual Studio Code</li>
+							<li>Jupyter Notebook</li>
+						</ul>
+						
+						<p>https://colab.research.google.com/ et anaconda</p>
+
+					</section>
+
+
+					<section class="bg-blue-50">
+						
+						<h2>Introduction à Python</h2>
+						<ul>
+							<li>Présentation du langage Python.</li>
+							<li>Historique et popularité.</li>
+							<li>Installation de Python et de l'environnement de développement (IDE).</li>
+						</ul>
+
+					</section>
+					<section class="bg-blue-50">
+						<h2>Premiers Pas en Python</h2>
+						<ul>
+							<li>Syntaxe de base.</li>
+							<li>Variables et types de données.</li>
+							<li>Opérations arithmétiques.</li>
+						</ul>
+					</section>
+					<section class="bg-blue-50">
+					
+						<h2>Structures de contrôle</h2>
+						<ul>
+							<li>Conditions (<em>if</em>, <em>else</em>, <em>elif</em>).</li>
+							<li>Boucles (<em>for</em>, <em>while</em>).</li>
+							<li>Utilisation de l'instruction break et continue.</li>
+						</ul>
+					</section>
+					<section class="bg-blue-50">
+					
+						<h2>Fonctions</h2>
+						<ul>
+							<li>Définition et appel de fonctions.</li>
+							<li>Paramètres et valeurs de retour.</li>
+							<li>Portée des variables.</li>
+						</ul>
+					</section>
+					<section class="bg-blue-50">
+					
+						<h2>Structures de Données</h2>
+						<ul>
+							<li>Listes et dictionnaires.</li>
+							<li>Opérations courantes sur les structures de données.</li>
+						</ul>
+					</section>
+					<section class="bg-blue-50">
+					
+						<h2>Gestion des Erreurs</h2>
+						<ul>
+							<li>Introduction aux exceptions.</li>
+							<li>Blocs try, except, else et finally.</li>
+						</ul>
+					</section>
+					<section class="bg-blue-50">
+					
+						<h2>Fichiers et manipulation de Données</h2>
+						<ul>
+							<li>Lecture et écriture de fichiers.</li>
+							<li>Traitement de données CSV.</li>
+						</ul>
+					</section>
+	
+					<section class="bg-blue-50">
+					
+						<h2>Modules et bibliothèques</h2>
+						<ul>
+							<li>Utilisation de modules.</li>
+							<li>Introduction aux bibliothèques standard.</li>
+						</ul>
+					
+					</section>
+				  </section>
+
+				<section>
+					
+					<section class="">
+					
+					<h1 class="text-blue-900 bg-white border-solid border-2 border-gray-200 rounded-full">Nettoyer des données</h1>
+					</section>
+					<section class="bg-blue-50">
+						<h3>Source</h3>
+
+						<table class="table-auto">
+							<thead class="bg-white text-blue-900">
+							<tr>
+								<td>NN</td>
+								<td>white-hair-count</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="ordinal slashed-zero tabular-nums">59031347332</td>
+								<td>172k</td>
+							</tr>
+							<tr>
+								<td class="ordinal slashed-zero tabular-nums">28061614571</td>
+								<td><span class="text-gray-200">N/A</span></td>
+							</tr>
+							<tr>
+								<td class="ordinal slashed-zero tabular-nums">83061729368</td>
+								<td>434</td>
+							</tr>
+						</tbody>
+						</table>
+					</section>
+				
+				</section>
+				<section class="bg-blue-50"><h1>Exploiter des données</h1></section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

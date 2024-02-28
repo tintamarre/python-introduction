@@ -1,10 +1,7 @@
 /**
- * White compact & high contrast reveal.js theme, with headers not in capitals.
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
  *
- * By Peter Kehl. Based on white.(s)css by Hakim El Hattab, http://hakim.se
- *
- * - Keep the source similar to black.css - for easy comparison.
- * - $mainFontSize controls code blocks, too (although under some ratio).
+ * By Hakim El Hattab, http://hakim.se
  */
 @import url(./fonts/source-sans-pro/source-sans-pro.css);
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
@@ -18,11 +15,11 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   --r-background-color: #fff;
   --r-main-font: Source Sans Pro, Helvetica, sans-serif;
   --r-main-font-size: 42px;
-  --r-main-color: #000;
+  --r-main-color: #222;
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
   --r-heading-font: Source Sans Pro, Helvetica, sans-serif;
-  --r-heading-color: #000;
+  --r-heading-color: #222;
   --r-heading-line-height: 1.2;
   --r-heading-letter-spacing: normal;
   --r-heading-text-transform: uppercase;
@@ -83,12 +80,10 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .reveal h5,
 .reveal h6 {
   margin: var(--r-heading-margin);
-  color: var(--r-heading-color);
   font-family: var(--r-heading-font);
   font-weight: var(--r-heading-font-weight);
   line-height: var(--r-heading-line-height);
   letter-spacing: var(--r-heading-letter-spacing);
-  text-transform: var(--r-heading-text-transform);
   text-shadow: var(--r-heading-text-shadow);
   word-wrap: break-word;
 }

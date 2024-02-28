@@ -1,9 +1,10 @@
 /**
- * A simple theme for reveal.js presentations, similar
- * to the default theme. The accent color is brown.
+ * Sky theme for reveal.js.
  *
- * This theme is Copyright (C) 2012-2013 Owen Versteeg, http://owenversteeg.com - it is MIT licensed.
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
 .reveal a {
   line-height: 1.3em;
 }
@@ -16,17 +17,17 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
  * GLOBAL STYLES
  *********************************************/
 :root {
-  --r-background-color: #F0F1EB;
-  --r-main-font: Palatino Linotype, Book Antiqua, Palatino, FreeSerif, serif;
+  --r-background-color: #f7fbfc;
+  --r-main-font: Open Sans, sans-serif;
   --r-main-font-size: 40px;
-  --r-main-color: #000;
+  --r-main-color: #333;
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
-  --r-heading-font: Palatino Linotype, Book Antiqua, Palatino, FreeSerif, serif;
-  --r-heading-color: #383D3D;
+  --r-heading-font: Quicksand, sans-serif;
+  --r-heading-color: #333;
   --r-heading-line-height: 1.2;
-  --r-heading-letter-spacing: normal;
-  --r-heading-text-transform: none;
+  --r-heading-letter-spacing: -0.08em;
+  --r-heading-text-transform: uppercase;
   --r-heading-text-shadow: none;
   --r-heading-font-weight: normal;
   --r-heading1-text-shadow: none;
@@ -35,17 +36,23 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   --r-heading3-size: 1.55em;
   --r-heading4-size: 1em;
   --r-code-font: monospace;
-  --r-link-color: #51483D;
-  --r-link-color-dark: #25211c;
-  --r-link-color-hover: #8b7c69;
-  --r-selection-background-color: #26351C;
+  --r-link-color: #3b759e;
+  --r-link-color-dark: #264c66;
+  --r-link-color-hover: #74a7cb;
+  --r-selection-background-color: #134674;
   --r-selection-color: #fff;
   --r-overlay-element-bg-color: 0, 0, 0;
   --r-overlay-element-fg-color: 240, 240, 240;
 }
 
 .reveal-viewport {
-  background: #F0F1EB;
+  background: #add9e4;
+  background: -moz-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #f7fbfc), color-stop(100%, #add9e4));
+  background: -webkit-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background: -o-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background: -ms-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background: radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
   background-color: var(--r-background-color);
 }
 
@@ -84,12 +91,10 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .reveal h5,
 .reveal h6 {
   margin: var(--r-heading-margin);
-  color: var(--r-heading-color);
   font-family: var(--r-heading-font);
   font-weight: var(--r-heading-font-weight);
   line-height: var(--r-heading-line-height);
   letter-spacing: var(--r-heading-letter-spacing);
-  text-transform: var(--r-heading-text-transform);
   text-shadow: var(--r-heading-text-shadow);
   word-wrap: break-word;
 }
