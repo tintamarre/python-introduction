@@ -35,35 +35,21 @@
 
 				<section class="bg-blue-50">
 					<section class="bg-blue-50">
-						<h1 class="text-blue-900 bg-white border-solid border-2 border-gray-200 rounded-full">
+						<h2 class="text-blue-900 bg-white border-solid border-2 border-gray-200 rounded-full">
 							Qui suis-je ?
-						</h1>
+						</h2>
 						<p class="text-blue-50">
 							<ul class="list-none text-3xl">
 								<li>Sociologue & data <span class="text-gray-400 italic">___</span></li>
 								<li>Créateur de <a href="https://mesydel.com">Mesylab</a> (ULiège), <a href="https://corpus.lltl.be">Corpus</a>, DataProtect, Omdat, (LegalTech Lab) ...</li>
-				
+								<li>À la FWB depuis 2022 -- (Bureau des données — DGCA — SG)</li>
 							</ul>
 					</section>
 					<section>
-						<h1 class="text-blue-900 bg-white border-solid border-2 border-gray-200 rounded-full">
+						<h2 class="text-blue-900 bg-white border-solid border-2 border-gray-200 rounded-full">
 							Bureau des données
-						</h1>
+						</h2>
 							<ul class="list-none text-3xl bg-blue-50">
-								<li>À la FWB depuis 2022 -- (Bureau des données — DGCA — SG)</li>
-								<li>On s'occupe de <span class="text-indigo-700">data-viz-qualité-transfert-gov ...</span></li>
-								<li>Lien avec l'<strong>Etnic</strong> / <strong>BCED</strong> sur les problématiques Data</li>
-								<li>Organisateur de la <strong>communauté des intendants de données</strong></li>
-								<li>Chantier transversal: <em>données au centre</em></li>
-							</ul>
-					</section>
-					<section class="bg-blue-50">
-						<h1 class="text-blue-900 bg-white border-solid border-2 border-gray-100 rounded-full">
-							Réalisations
-						</h1>
-						<p class="text-blue-50">
-							<ul class="list-none text-3xl">
-								<li>À la FWB depuis 2022 -- (Bureau des données — DGCA — SG)</li>
 								<li>On s'occupe de <span class="text-indigo-700">data-viz-qualité-transfert-gov ...</span></li>
 								<li>Lien avec l'<strong>Etnic</strong> / <strong>BCED</strong> sur les problématiques Data</li>
 								<li>Organisateur de la <strong>communauté des intendants de données</strong></li>
@@ -76,161 +62,82 @@
 					<section>
 					<h1 class="text-blue-900 bg-white border-solid border-2 border-gray-200 rounded-full">Introduction à Python</h1>
 					</section>
-					<section class="bg-blue-50">Présentation du langage Python.</section>
+					
 					<section class="bg-blue-50">
-						<h2>Historique et popularité</h2>
-						<p class="text-gray-600 text-medium">
-							Python est un langage de programmation interprété, multi-paradigme et multi-plateformes.
-						</p>
-						<p class="text-red-500 text-medium">
-							Il favorise la programmation impérative structurée, fonctionnelle et orientée objet.
-						</p>
+					<h2 class="text-blue-900 bg-white border-solid border-2 border-gray-200 rounded-full">
+						Historique et popularité
+					</h2>
+					<ul class="list-none text-3xl bg-blue-50">
+
+						<li>
+							Python est un langage de programmation <span class="text-indigo-700">interprété, multi-paradigme et multi-plateformes</span>.
+						</li>
+						<li>
+							Il favorise la programmation <span class="text-green-700">impérative structurée, fonctionnelle et orientée objet</span>.
+						</li>
+						<li>
+							Il est fréquemment enseigné comme <strong>premier langage de programmation</strong> en raison de sa <em>simplicité</em> et de sa <em>clarté</em>.
+						</li>
+						</ul>
 					</section>
-					<section class="bg-blue-50">Installation de Python et de l'environnement de développement (IDE)</section>
 
+						<section class="bg-blue-50">
+							<h2 class="text-blue-900 bg-white border-solid border-2 border-gray-200 rounded-full">
+								Le combo 
+							</h2>
+
+						<p>
+							Le <strong>SQL</strong> et le <strong>Python</strong> sont les langages de programmation les plus populaires pour l'analyse de données et l'exploitation de données.
+						</p>
+
+						<p><strong>Le combo 🏆</strong> = SQL + Python</p>
+
+					</section>
+					<section class="bg-blue-50">
+						<h2 class="text-blue-900 bg-white border-solid border-2 border-gray-200 rounded-full">
+							Installation de Python et IDE
+						</h2>
+
+							<ul class="list-none text-3xl bg-blue-50">
+								<li>Python est disponible sur <a href="https://www.python.org/downloads/">le site officiel</a> et sur <a href="https://www.anaconda.com/products/distribution">Anaconda</a></li>
+								<li>Les IDE les plus populaires sont <a href="https://www.jetbrains.com/fr-fr/pycharm/">PyCharm</a>, <a href="https://code.visualstudio.com/">VSCode</a>, Vim, <a href="https://jupyter.org/">Jupyter</a> ...</li>
+							</ul>
+					
+							<p>Pour découvrir simplement le langage, il est recommandé d'utiliser des plateformes de type <a href="https://jupyter.org/">Jupyter</a>, Google Colab ou Kaggle.</p>
+						
+							<p>
+								Pour cet atelier, j'utiliserai VSCode et <a href="https://jupyter.org/">Jupyter</a>.
+							</p>
+
+						</section>
 				</section>
-
-				<section class="bg-blue-50"><h1>Chargement de données</h1></section>
-
-				<section class="bg-blue-50">
-					<h2 class="text-blue-900 bg-white">Importer des données</h2>
-					<pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers>
-						import pandas as pd
-						df = pd.read_csv('./data.csv')
-						// df = df.read_excel('./data.xlsx')
-						// df = df.read_json('./data.json')
-						// df = df.read_csv('https://raw.githubusercontent.com/data-cfwb/initiation-python/main/data.csv', sep=';', encoding='utf-8', decimal=',')
-						df = pd.read_csv("https://www.odwb.be/api/explore/v2.1/catalog/datasets/signaletique-fase/exports/csv?lang=fr&timezone=Europe%2FBrussels&use_labels=true&delimiter=,")
-						df.head()
-					</code>
-				</pre>
 				
-				</section>
-
 				<section class="bg-blue-50">
-
-					<section class="bg-blue-50">Vertical Slide 1</section>
-					<section class="bg-blue-50">
-						<h2>Environnement de développement</h2>
-						<p>Il existe de nombreux environnements de développement pour Python. Les plus populaires sont :</p>
-						<ul>
-							<li>PyCharm</li>
-							<li>Visual Studio Code</li>
-							<li>Jupyter Notebook</li>
-						</ul>
-						
-						<p>https://colab.research.google.com/ et anaconda</p>
-
+					<section>
+					<h1 class="text-blue-900 bg-white border-solid border-2 border-gray-200 rounded-full">ToC de l'atelier</h1>
 					</section>
 
-
 					<section class="bg-blue-50">
-						
-						<h2>Introduction à Python</h2>
-						<ul>
-							<li>Présentation du langage Python.</li>
-							<li>Historique et popularité.</li>
-							<li>Installation de Python et de l'environnement de développement (IDE).</li>
-						</ul>
-
-					</section>
-					<section class="bg-blue-50">
-						<h2>Premiers Pas en Python</h2>
-						<ul>
-							<li>Syntaxe de base.</li>
-							<li>Variables et types de données.</li>
-							<li>Opérations arithmétiques.</li>
-						</ul>
-					</section>
-					<section class="bg-blue-50">
-					
-						<h2>Structures de contrôle</h2>
-						<ul>
-							<li>Conditions (<em>if</em>, <em>else</em>, <em>elif</em>).</li>
-							<li>Boucles (<em>for</em>, <em>while</em>).</li>
-							<li>Utilisation de l'instruction break et continue.</li>
-						</ul>
-					</section>
-					<section class="bg-blue-50">
-					
-						<h2>Fonctions</h2>
-						<ul>
-							<li>Définition et appel de fonctions.</li>
-							<li>Paramètres et valeurs de retour.</li>
-							<li>Portée des variables.</li>
-						</ul>
-					</section>
-					<section class="bg-blue-50">
-					
-						<h2>Structures de Données</h2>
-						<ul>
-							<li>Listes et dictionnaires.</li>
-							<li>Opérations courantes sur les structures de données.</li>
-						</ul>
-					</section>
-					<section class="bg-blue-50">
-					
-						<h2>Gestion des Erreurs</h2>
-						<ul>
-							<li>Introduction aux exceptions.</li>
-							<li>Blocs try, except, else et finally.</li>
-						</ul>
-					</section>
-					<section class="bg-blue-50">
-					
-						<h2>Fichiers et manipulation de Données</h2>
-						<ul>
-							<li>Lecture et écriture de fichiers.</li>
-							<li>Traitement de données CSV.</li>
-						</ul>
-					</section>
+						<h2 class="text-blue-900 bg-white border-solid border-2 border-gray-200 rounded-full">
+							3 sections et un bonus 🎁
+						</h2>
+						<ul class="list-none text-3xl bg-blue-50">
 	
-					<section class="bg-blue-50">
-					
-						<h2>Modules et bibliothèques</h2>
-						<ul>
-							<li>Utilisation de modules.</li>
-							<li>Introduction aux bibliothèques standard.</li>
-						</ul>
-					
-					</section>
-				  </section>
-
-				<section>
-					
-					<section class="">
-					
-					<h1 class="text-blue-900 bg-white border-solid border-2 border-gray-200 rounded-full">Nettoyer des données</h1>
-					</section>
-					<section class="bg-blue-50">
-						<h3>Source</h3>
-
-						<table class="table-auto">
-							<thead class="bg-white text-blue-900">
-							<tr>
-								<td>NN</td>
-								<td>white-hair-count</td>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td class="ordinal slashed-zero tabular-nums">59031347332</td>
-								<td>172k</td>
-							</tr>
-							<tr>
-								<td class="ordinal slashed-zero tabular-nums">28061614571</td>
-								<td><span class="text-gray-200">N/A</span></td>
-							</tr>
-							<tr>
-								<td class="ordinal slashed-zero tabular-nums">83061729368</td>
-								<td>434</td>
-							</tr>
-						</tbody>
-						</table>
-					</section>
-				
+							<li>
+								<strong>Section 1:</strong> <span class="text-indigo-700">Introduction à Python: variables, opérations de base, les fonctions, ...</span>
+							</li>
+							<li>
+								<strong>Section 2:</strong> <span class="text-indigo-700">Changement et manipulation des données</span>
+							</li>
+							<li>
+								<strong>Section 3:</strong> <span class="text-indigo-700">Sélection et jointure de données</span>
+							</li>
+							<li>
+								<strong>Bonus:</strong> <span class="text-red-700">Anonymisation des microdonnées</span>
+							</li>
+							</ul>
+						</section>
 				</section>
-				<section class="bg-blue-50"><h1>Exploiter des données</h1></section>
 
 			</div>
 		</div>
